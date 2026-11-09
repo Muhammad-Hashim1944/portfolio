@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Muhammad Hashim</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-wordmark" aria-label="Muhammad Hashim Portfolio Home">
+        Muhammad Hashim <span class="accent-dot"></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link dropdown-trigger">
+              Services
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="creative-strategy.html" class="dropdown-link">Creative Strategy</a>
+              <a href="shopify-developer.html" class="dropdown-link">Shopify Store Developer</a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+
+        <div class="header-cta">
+          <a href="https://wa.me/966536475110" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+            WhatsApp
+          </a>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <!-- Contact Header -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="badge badge-accent">Direct Contact</span>
+          <span class="badge">Fast Response via WhatsApp</span>
+        </div>
+
+        <h1 class="hero-title">
+          Let's discuss your Shopify store or creative testing.
+        </h1>
+
+        <p class="hero-lead">
+          I am available for new store builds, catalogue management, and creative research. Message directly on WhatsApp for immediate communication, or use the form below.
+        </p>
+
+        <div class="btn-group">
+          <a href="https://wa.me/966536475110" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+            WhatsApp: +966 53 647 5110
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Details Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left Column: Details -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-label">WhatsApp (Preferred)</span>
+              <div class="contact-val">
+                <a href="https://wa.me/966536475110" target="_blank" rel="noopener noreferrer" style="color: #25D366;">
+                  +966 53 647 5110 &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Direct Email</span>
+              <div class="contact-val">
+                <a href="mailto:20muhammad.hashim.05@gmail.com">
+                  20muhammad.hashim.05@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <div class="contact-val">
+                <a href="https://www.linkedin.com/in/muhammad-hashim-39a7083a1/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/muhammad-hashim-39a7083a1 &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Instagram</span>
+              <div class="contact-val">
+                <a href="https://www.instagram.com/muhammad.hashim05/" target="_blank" rel="noopener noreferrer">
+                  instagram.com/muhammad.hashim05 &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="card" style="padding: 24px; margin-top: 12px;">
+              <h4 style="margin-bottom: 8px;">Response Time</h4>
+              <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: 0;">
+                WhatsApp inquiries receive a reply within a few hours. Email inquiries are answered within 24 hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Form -->
+          <div class="contact-form-box">
+            <h2 style="font-size: 1.5rem; margin-bottom: 8px;">Send a message</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.92rem; margin-bottom: 24px;">
+              Fill out the form below. If you have an active store URL or specific target launch date, please include it.
+            </p>
+
+            <div id="form-feedback" class="form-feedback" role="alert"></div>
+
+            <form id="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label for="first-name" class="form-label">First Name</label>
+                  <input type="text" id="first-name" name="first_name" class="form-input" required placeholder="e.g. John">
+                </div>
+
+                <div class="form-group">
+                  <label for="last-name" class="form-label">Last Name</label>
+                  <input type="text" id="last-name" name="last_name" class="form-input" required placeholder="e.g. Doe">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" required placeholder="e.g. john@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +966 50 123 4567">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message &amp; Project Details</label>
+                <textarea id="message" name="message" class="form-textarea" rows="4" required placeholder="Briefly describe your store, target market, or current challenges."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <i class="fa-regular fa-paper-plane"></i> Send Inquiry
+              </button>
+
+              <p class="form-notice">
+                Note: Submissions route directly to 20muhammad.hashim.05@gmail.com. You can also message directly on WhatsApp for quicker updates.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="creative-strategy.html" class="footer-link">Creative Strategy</a></li>
+            <li><a href="shopify-developer.html" class="footer-link">Shopify Developer</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/966536475110" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-hashim-39a7083a1/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/muhammad.hashim05/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="mailto:20muhammad.hashim.05@gmail.com" class="footer-link"><i class="fa-regular fa-envelope"></i> Email</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Contact</h4>
+          <ul class="footer-links">
+            <li class="footer-link">+966 53 647 5110</li>
+            <li class="footer-link">20muhammad.hashim.05@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Muhammad Hashim. All rights reserved.</p>
+        <p>Built with minimal, clean code.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
