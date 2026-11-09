@@ -118,5 +118,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fallback if IntersectionObserver is not supported
     animatedElements.forEach((el) => el.classList.add('is-visible'));
   }
+
+  // 6. Connected Segmented Tab Navigation (URAPRA Case Study)
+  const csTabButtons = document.querySelectorAll('.cs-tab-btn');
+  const csTabPanels = document.querySelectorAll('.cs-tab-panel');
+
+  if (csTabButtons.length > 0 && csTabPanels.length > 0) {
+    csTabButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        // Deactivate all tabs
+        csTabButtons.forEach((b) => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+          b.setAttribute('tabindex', '-1');
+        });
+        // Hide all panels
+        csTabPanels.forEach((p) => {
+          p.classList.remove('is-active');
+          p.setAttribute('hidden', '');
+        });
+
+        // Activate selected tab
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        btn.setAttribute('tabindex', '0');
+
+        // Show corresponding panel
+        const targetPanelId = btn.getAttribute('aria-controls');
+        const targetPanel = document.getElementById(targetPanelId);
+        if (targetPanel) {
+          targetPanel.classList.add('is-active');
+          targetPanel.removeAttribute('hidden');
+        }
+      });
+
+      // Keyboard arrow navigation between tabs
+      btn.addEventListener('keydown', (e) => {
+        let newIndex = null;
+        if (e.key === 'ArrowRight') {
+          newIndex = (index + 1) % csTabButtons.length;
+        } else if (e.key === 'ArrowLeft') {
+          newIndex = (index - 1 + csTabButtons.length) % csTabButtons.length;
+        } else if (e.key === 'Home') {
+          newIndex = 0;
+        } else if (e.key === 'End') {
+          newIndex = csTabButtons.length - 1;
+        }
+
+        if (newIndex !== null) {
+          e.preventDefault();
+          csTabButtons[newIndex].focus();
+          csTabButtons[newIndex].click();
+        }
+      });
+    });
+  }
 });
 
