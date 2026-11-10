@@ -1498,7 +1498,17 @@ button, input, textarea, select {
 @media (max-width: 992px) {
   .hero-2col {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+
+  .hero-image-wrap {
+    order: -1;
+    max-width: 320px;
+    margin: 0 auto 20px auto;
+  }
+
+  .hero-content {
+    order: 1;
   }
 
   .stats-grid {
@@ -1633,28 +1643,34 @@ button, input, textarea, select {
 
   .hero-2col {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .hero-image-wrap {
-    order: 2; /* Content first, image nicely centered below it */
+    order: -1; /* Image first on mobile */
     width: 100%;
-    max-width: 320px;
-    margin: 16px auto 0 auto;
+    max-width: 290px;
+    margin: 0 auto 18px auto;
     padding: 0;
   }
 
   .hero-image-card {
     transform: rotate(0deg) !important;
-    max-width: 320px;
+    max-width: 290px;
     margin: 0 auto;
+    border-radius: var(--radius-lg);
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
   }
 
   .hero-photo {
-    height: 380px;
+    height: 350px;
     width: 100%;
     object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-content {
+    order: 1; /* Text after the image */
   }
 
   /* Unified Button Alignment on Mobile */
